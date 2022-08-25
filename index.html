@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>library project</title>
+    
+    <link rel="stylesheet" href="/assets/index.77692817.css">
+  </head>
+
+  <body>
+    <header class="text-gray-600 body-font bg-gray-800 py-4">
+      <div class="container mx-auto flex p-1 flex-col lg:flex-row items-center">
+        <a
+          class="flex title-font font-medium items-center text-gray-900 md:mb-0"
+        >
+          <img src="/assets/book.a6998816.png" />
+          <span class="ml-3 text-3xl tracking-tighter text-white"
+            >Dynamic public library</span
+          >
+        </a>
+        <nav class="mt-2 mb-6 md:mt-0 md:mb-0 mx-auto">
+          <a class="mr-5 mb-4 md:mb-0 text-white font-thin text-2xl">Home</a>
+        </nav>
+        <form>
+          <label
+            for="default-search"
+            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
+            >Search</label
+          >
+          <div class="relative">
+            <input
+              type="search"
+              id="searchTxt"
+              class="block p-4 px-20 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Search books, Logos..."
+              required=""
+            />
+            <button
+              type="submit"
+              class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+    </header>
+    <div id="alert"></div>
+    <div
+      class="container mx-auto w-full md:w-1/2 my-8 bg-gray-800 p-8 rounded-md"
+    >
+      <form id="libraryForm">
+        <div class="mb-4 py-3">
+          <label for="bookName" class="mb-2 text-md font-medium text-white"
+            >Book Name</label
+          >
+          <input
+            type="text"
+            id="bookName"
+            class="bg-gray-50 mt-1 block border border-gray-300 text-w text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="book name"
+            required=""
+          />
+        </div>
+        <div class="mb-6">
+          <label for="Author" class="block mb-2 text-md font-medium text-white"
+            >Author</label
+          >
+          <input
+            type="text"
+            id="author"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="author"
+            required=""
+          />
+        </div>
+        <div class="flex flex-col text-white">
+          <h1 class="font-md text-white">Type</h1>
+          <div class="flex mt-2 space-x-8">
+            <input type="radio" name="type" id="fiction" value="fiction" />
+            <p>fiction</p>
+          </div>
+          <div class="flex mt-2 space-x-8">
+            <input
+              type="radio"
+              name="type"
+              id="programming"
+              value="computer language"
+              S
+            />
+            <p>Computer language</p>
+          </div>
+          <div class="flex mt-2 mb-4 space-x-8">
+            <input type="radio" name="type" id="cooking" value="cooking" />
+            <p>cooking</p>
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        >
+          Add Book
+        </button>
+      </form>
+    </div>
+    <div id="table" class="flex items-center justify-center">
+      <div class="overflow-x-auto relative w-[90vw]">
+        <table
+          class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+        >
+          <thead
+            class="text-xs text-center w-[90vw] text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+          >
+            <tr>
+              <th scope="col" class="py-3 px-6">Name</th>
+              <th scope="col" class="py-3 px-6">Author</th>
+              <th scope="col" class="py-3 px-6">Type</th>
+              <th scope="col" class="py-3 px-6">status</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <!-- <script src="script.js"></script> -->
+  <script src="script.js"></script>
+  <!-- <script src="usinges6class.js"></script> -->
+</html>
